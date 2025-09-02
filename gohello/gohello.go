@@ -9,4 +9,6 @@ func generateHelloMessage(name string) string {
 func main() {
 	message := generateHelloMessage("world")
 	fmt.Println(message)
+
+	
 }
