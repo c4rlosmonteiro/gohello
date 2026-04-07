@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func incOne(value *int) {
+	*value += 1
+}
+
 func main() {
 	myString := "My string!"
 	fmt.Printf("My string value is '%s' and my pointer is '%p'\n", myString, &myString) //out: My string value is 'My string!' and my pointer is '0xc000096020'
@@ -20,4 +24,12 @@ func main() {
 	fmt.Printf("myFloatVarPointer value is: %.2f | %p\n", *myFloatVarPointer, myFloatVarPointer) //out: myFloatVarPointer value is: 7.80 | 0xc0000ac010
 
 	fmt.Println("____________")
+
+	index := 0
+	fmt.Printf("my index value is: %d\n", index)
+	incOne(&index)
+	fmt.Printf("my index value is: %d\n", index)
+	incOne(&index)
+	fmt.Printf("my index value is: %d\n", index)
+	
 }
